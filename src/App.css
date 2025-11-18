@@ -1,0 +1,347 @@
+/* === Global Styles === */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  overflow: auto;
+} 
+/* === Dark Mode === */
+.dark {
+  background: linear-gradient(135deg, #0d0d0d, #232526);
+  color: #e0e0e0;
+}
+/* === Navbar === */
+nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+} 
+/* === Active NavLink === */
+.active {
+  text-decoration: none;
+  color: #d9e7ff;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  color: #ffb74d !important;
+  text-shadow: 0px 0px 8px #ffc85c;
+}
+.active:hover {
+  color: #fff;
+  transform: scale(1.1);
+} 
+/* === Main Container === */
+.page-container {
+  width: 100%;
+  max-width: 2000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+/* === Home Button === */
+.btn {
+  margin-top: 25px;
+  display: inline-block;
+  padding: 12px 30px;
+  background: #ff9800;
+  color: white;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: #ffa726;
+  transform: scale(1.05);
+} 
+/* === About Page === */
+strong {
+  color: #ffeb3b;
+} 
+/* === Weather Page === */
+.weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 90px;
+}
+.weather h1 {
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.weather input {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 16px;
+  margin-right: 10px;
+  transition: 0.3s ease;
+}
+.weather input:focus {
+  background: rgba(255, 255, 255, 0.25);
+}
+.weather button {
+  margin-top: 25px;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ff9800;
+  color: white;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.weather button:hover {
+  background-color: #ffa726;
+  transform: scale(1.05);
+}
+.weather input::placeholder {
+  color: #fffdfd;
+  opacity: 0.2;
+}
+.error {
+  color: red;
+  font-weight: bold;
+} 
+/* === Weather Card === */
+.weather-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  margin-top: 40px;
+  width: 300px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transition: 0.4s ease;
+}
+.weather-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.12);
+}
+.weather-card h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.weather-card img {
+  width: 80px;
+  height: 80px;
+  margin: 3px 0;
+}
+.weather-card h3 {
+  font-size: 26px;
+  color: #ffe082;
+  margin: 5px 0;
+  font-weight: bold;
+}
+.weather-card p {
+  font-size: 16px;
+  color: #e3f2fd;
+  margin-top: 8px;
+}
+/* === Theme Toggle === */
+.theme-toggle {
+  text-align: right;
+  margin-bottom: 15px;
+} 
+/* === Forecast Section === */
+.forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+.forecast h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+.forecast-grid {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+.forecast-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 35px;
+  width: 600px;
+  height: 185px;
+  text-align: center;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.forecast-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+.forecast-card img {
+  width: 50px;
+  height: 50px;
+  margin: 3px 0;
+}
+.forecast-card p {
+  font-size: 15px;
+  margin: 5px 0;
+  color: #fff;
+}
+/* === Dark Mode for Cards === */
+.dark .weather-card,
+.dark .forecast-card {
+  background: rgba(40, 40, 40, 0.9);
+}
+.dark .forecast-card:hover {
+  background: rgba(60, 60, 60, 0.9);
+}
+.dark .weather-card h3 {
+  color: #ffc107;
+}
+.dark .forecast-card {
+  background: #333;
+  color: white;
+} 
+/* === Floating Weather Icons === */
+.floating-icons {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 2rem;
+  opacity: 0.7;
+}
+.floating-icons span {
+  animation: float 4s infinite ease-in-out;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+} 
+/* === Responsive Design === */
+
+/* --- Screens between 1024px and 1400px --- */
+@media (max-width: 1400px) {
+  nav {
+    width: 430px;
+    gap: 30px;
+  }
+  .weather-card {
+    width: 280px;
+  }
+  .forecast-card {
+    width: 110px;
+  }
+}
+/* --- Tablets (max 992px) --- */
+@media (max-width: 992px) {
+  nav {
+    width: 400px;
+    gap: 25px;
+    top: 15px;
+    height: 45px;
+  }
+  .menu a,
+  .active {
+    font-size: 14px;
+  }
+  .weather-card {
+    width: 260px;
+    padding: 25px;
+  }
+  .forecast-grid {
+    gap: 10px;
+  }
+  .forecast-card {
+    width: 105px;
+    padding: 12px;
+  }
+}
+/* --- Smartphones (max 768px) --- */
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    align-items: flex-start;
+    padding-top: 120px;
+  }
+  nav {
+    width: 90%;
+    height: 45px;
+    gap: 20px;
+    top: 10px;
+  }
+  .page-container {
+    padding: 20px;
+  }
+  .weather {
+    margin-top: 40px;
+  }
+  .weather input {
+    width: 90%;
+    margin: 0 auto 15px auto;
+  }
+  .weather button {
+    margin-top: 10px;
+  }
+  .weather-card {
+    width: 85%;
+    max-width: 300px;
+  }
+  .forecast-grid {
+    justify-content: center;
+  }
+} 
+/* --- Small Smartphones (max 480px) --- */
+@media (max-width: 480px) {
+  nav {
+    gap: 12px;
+    padding: 0 10px;
+  }
+  .menu a,
+  .active {
+    font-size: 13px;
+  }
+  .weather h1 {
+    font-size: 20px;
+  }
+  .forecast h2 {
+    font-size: 18px;
+  }
+  .forecast-card {
+    width: 90px;
+  }
+  .floating-icons {
+    font-size: 1.5rem;
+    bottom: 20px;
+  }
+}
